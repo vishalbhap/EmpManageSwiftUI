@@ -14,7 +14,8 @@ struct EmployeeListScreen: View {
     var body: some View {
         NavigationView {
             List(employeeViewModel.employees) { employee in
-                NavigationLink(destination: EmployeeDetailView(employee: employee)) {
+                NavigationLink(
+                    destination: EmployeeDetailView(employee: employee)) {
                     Text(employee.firstName)
                 }
             }
@@ -22,9 +23,13 @@ struct EmployeeListScreen: View {
             .onAppear(){
                 employeeViewModel.fetchEmployees()
             }
+            .alert(isPresented: $employeeViewModel.hasError) { errorAlert }
         }
     }
+
 }
+
+
 
 struct EmployeeListScreen_Previews: PreviewProvider {
     static var previews: some View {
@@ -37,5 +42,16 @@ struct EmployeeDetailView: View {
 
     var body: some View {
         Text("Hi")
+    }
+}
+
+extension EmployeeListScreen {
+    var errorAlert: Alert {
+        Alert(
+            title: Text("Error"),
+            message: Text(employeeViewModel.state.localizedDescription),
+            primaryButton: .default(Text("Retry"), action: employeeViewModel.fetchEmployees),
+            secondaryButton: .cancel(Text("Cancel"))
+        )
     }
 }

@@ -17,3 +17,9 @@ struct Employee: Codable, Identifiable {
     let emailId: String
     let id: Int
 }
+
+struct CustomEmployee: Codable {
+    let firstName: String
+    let lastName: String
+    let emailId: String
+}

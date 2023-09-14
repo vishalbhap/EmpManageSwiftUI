@@ -11,11 +11,14 @@
 		690BE0672AB2F42C00F99B7A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690BE0662AB2F42C00F99B7A /* ContentView.swift */; };
 		690BE0692AB2F43200F99B7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 690BE0682AB2F43200F99B7A /* Assets.xcassets */; };
 		690BE06C2AB2F43200F99B7A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 690BE06B2AB2F43200F99B7A /* Preview Assets.xcassets */; };
-		690BE0772AB2F55D00F99B7A /* EmployeeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690BE0762AB2F55D00F99B7A /* EmployeeResponse.swift */; };
-		690BE0792AB2F6A700F99B7A /* EmployeeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690BE0782AB2F6A700F99B7A /* EmployeeService.swift */; };
+		690BE0772AB2F55D00F99B7A /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690BE0762AB2F55D00F99B7A /* Employee.swift */; };
+		690BE0792AB2F6A700F99B7A /* EmployeeListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690BE0782AB2F6A700F99B7A /* EmployeeListService.swift */; };
 		690BE07C2AB2F71900F99B7A /* EmployeeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690BE07B2AB2F71900F99B7A /* EmployeeError.swift */; };
 		690BE07E2AB2F8D100F99B7A /* EmployeeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690BE07D2AB2F8D100F99B7A /* EmployeeViewModel.swift */; };
 		690BE0882AB3045700F99B7A /* EmployeeListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690BE0872AB3045700F99B7A /* EmployeeListScreen.swift */; };
+		69169C4B2AB3194800C1A7A7 /* EmployeeAddService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69169C4A2AB3194800C1A7A7 /* EmployeeAddService.swift */; };
+		69169C4D2AB31B6300C1A7A7 /* EmployeeAddViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69169C4C2AB31B6300C1A7A7 /* EmployeeAddViewModel.swift */; };
+		69169C4F2AB31C6000C1A7A7 /* EmployeeAddScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69169C4E2AB31C6000C1A7A7 /* EmployeeAddScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,11 +27,14 @@
 		690BE0662AB2F42C00F99B7A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		690BE0682AB2F43200F99B7A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		690BE06B2AB2F43200F99B7A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		690BE0762AB2F55D00F99B7A /* EmployeeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeResponse.swift; sourceTree = "<group>"; };
-		690BE0782AB2F6A700F99B7A /* EmployeeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeService.swift; sourceTree = "<group>"; };
+		690BE0762AB2F55D00F99B7A /* Employee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
+		690BE0782AB2F6A700F99B7A /* EmployeeListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeListService.swift; sourceTree = "<group>"; };
 		690BE07B2AB2F71900F99B7A /* EmployeeError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeError.swift; sourceTree = "<group>"; };
 		690BE07D2AB2F8D100F99B7A /* EmployeeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeViewModel.swift; sourceTree = "<group>"; };
 		690BE0872AB3045700F99B7A /* EmployeeListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeListScreen.swift; sourceTree = "<group>"; };
+		69169C4A2AB3194800C1A7A7 /* EmployeeAddService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeAddService.swift; sourceTree = "<group>"; };
+		69169C4C2AB31B6300C1A7A7 /* EmployeeAddViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeAddViewModel.swift; sourceTree = "<group>"; };
+		69169C4E2AB31C6000C1A7A7 /* EmployeeAddScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeAddScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,7 +91,7 @@
 		690BE0722AB2F45200F99B7A /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				690BE0762AB2F55D00F99B7A /* EmployeeResponse.swift */,
+				690BE0762AB2F55D00F99B7A /* Employee.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -93,7 +99,8 @@
 		690BE0732AB2F46300F99B7A /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				690BE0782AB2F6A700F99B7A /* EmployeeService.swift */,
+				690BE0782AB2F6A700F99B7A /* EmployeeListService.swift */,
+				69169C4A2AB3194800C1A7A7 /* EmployeeAddService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -102,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				690BE07D2AB2F8D100F99B7A /* EmployeeViewModel.swift */,
+				69169C4C2AB31B6300C1A7A7 /* EmployeeAddViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -110,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				690BE0872AB3045700F99B7A /* EmployeeListScreen.swift */,
+				69169C4E2AB31C6000C1A7A7 /* EmployeeAddScreen.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -193,11 +202,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				690BE0672AB2F42C00F99B7A /* ContentView.swift in Sources */,
-				690BE0792AB2F6A700F99B7A /* EmployeeService.swift in Sources */,
+				690BE0792AB2F6A700F99B7A /* EmployeeListService.swift in Sources */,
 				690BE07C2AB2F71900F99B7A /* EmployeeError.swift in Sources */,
 				690BE0882AB3045700F99B7A /* EmployeeListScreen.swift in Sources */,
-				690BE0772AB2F55D00F99B7A /* EmployeeResponse.swift in Sources */,
+				690BE0772AB2F55D00F99B7A /* Employee.swift in Sources */,
+				69169C4B2AB3194800C1A7A7 /* EmployeeAddService.swift in Sources */,
 				690BE07E2AB2F8D100F99B7A /* EmployeeViewModel.swift in Sources */,
+				69169C4F2AB31C6000C1A7A7 /* EmployeeAddScreen.swift in Sources */,
+				69169C4D2AB31B6300C1A7A7 /* EmployeeAddViewModel.swift in Sources */,
 				690BE0652AB2F42C00F99B7A /* EmployeeManagementSystemSwiftUIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
