@@ -10,7 +10,8 @@ import SwiftUI
 struct EmployeeAddScreen: View {
 
     @ObservedObject var employeeAddViewModel = EmployeeAddViewModel()
-
+//    @Environment(\.presentationMode) var presentationMode
+    @State private var isShowingEmployeeListScreen = false
 
     var body: some View {
         VStack{
@@ -34,6 +35,9 @@ struct EmployeeAddScreen: View {
 
             Button(action: {
                     employeeAddViewModel.addEmployee()
+//                    presentationMode.wrappedValue.dismiss()
+                    self.isShowingEmployeeListScreen.toggle()
+
             }) {
                 Text("Add Employee")
                     .fontWeight(.bold)
@@ -50,6 +54,9 @@ struct EmployeeAddScreen: View {
             }
         }
         .alert(isPresented: $employeeAddViewModel.hasError) { errorAlert }
+        .sheet(isPresented: $isShowingEmployeeListScreen) {
+            EmployeeListScreen()
+        }
 
     }
 }

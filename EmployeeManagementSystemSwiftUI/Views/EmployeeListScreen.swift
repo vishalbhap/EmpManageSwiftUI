@@ -10,6 +10,7 @@ import SwiftUI
 struct EmployeeListScreen: View {
 
     @ObservedObject var employeeViewModel = EmployeeViewModel()
+    @State private var isShowingEmployeeAddScreen = false // Add this state
     
     var body: some View {
         NavigationView {
@@ -24,6 +25,14 @@ struct EmployeeListScreen: View {
                 employeeViewModel.fetchEmployees()
             }
             .alert(isPresented: $employeeViewModel.hasError) { errorAlert }
+            .navigationBarItems(trailing: Button(action: {
+                            self.isShowingEmployeeAddScreen.toggle()
+                        }) {
+                            Text("Add Employee")
+                        })
+                        .sheet(isPresented: $isShowingEmployeeAddScreen) {
+                            EmployeeAddScreen()
+                        }
         }
     }
 
